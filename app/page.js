@@ -9,7 +9,7 @@ export default function Home() {
       <div className="flex justify-center items-center">
         <Image src="/vector.jpg" alt="vector image" width={500} height={500} />
       </div>
-      <h1 className=" text-center font-bold mt-5 text-4xl text-blue-700 ">
+      <h1 className=" text-center font-bold mt-5 text-3xl md:text-4xl text-blue-700 ">
         Code ... Eat ... Repeat... 💯
       </h1>
       <div className="flex flex-row justify-center gap-5 mt-5">
