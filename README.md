@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Web App with Firebase Data and Dynamic Table Filter Component
 
-## Getting Started
+## Overview
+This web application is designed to display data retrieved from Firebase in a tabular format. It includes a dynamic table filter component that allows users to filter the table contents based on specific conditions. The filter component generates filter queries in a predefined format and applies them to the table.
 
-First, run the development server:
+## Features
+- Display data from Firebase in a table format.
+- Dynamic table filter component to filter data based on user-defined conditions.
+- Add any number of filter conditions with logical AND/OR operations.
+- Support for various data types including string, number, and boolean.
+- Intuitive user interface with user-friendly dropdowns and text inputs.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Components
+### 1. Table Component
+- Columns:
+  - Name
+  - Screen Name
+  - Followers Count
+  - Following Count
+  - Location
+  - Verified
+- Data is retrieved from Firebase and displayed in the table.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Filter Component
+- Allows users to add multiple filter conditions.
+- Each filter condition consists of:
+  - Column Name (Dropdown)
+  - Operator (Dropdown)
+  - Value (Text input / Dropdown for boolean)
+- Supports logical AND/OR operations between filter conditions.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Sample Output
+![Sample Output](sample_output.png)
 
-To learn more about Next.js, take a look at the following resources:
+## How to Run
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Start the development server with `npm start`.
+4. Access the web app through the provided URL.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
+- Next.js
+- Firebase
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgements
+Special thanks to Firebase for providing the database service, and to React.js community for the frontend framework.
