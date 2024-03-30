@@ -20,7 +20,7 @@ const FilterComponent = () => {
       columnName: "",
       operator: "",
       value: "",
-      condition: "OR",
+      condition: "",
     },
   ]);
   const [columns, setColumns] = useState([]);
@@ -127,12 +127,12 @@ const FilterComponent = () => {
                   )
                 );
               } else if (filter.columnName === "verified") {
-                if (filter.value.toLowerCase() === "yes") {
+                if (filter.value.toLowerCase() === "true") {
                   userQuery = query(
                     userCollection,
                     where(filter.columnName, "==", true)
                   );
-                } else if (filter.value.toLowerCase() === "no") {
+                } else if (filter.value.toLowerCase() === "false") {
                   userQuery = query(
                     userCollection,
                     where(filter.columnName, "==", false)
@@ -168,7 +168,7 @@ const FilterComponent = () => {
         columnName: "",
         operator: "",
         value: "",
-        condition: "OR",
+        condition: "",
       },
     ]);
   };
@@ -221,8 +221,8 @@ const FilterComponent = () => {
             {filter.columnName === "followersCount" ||
             filter.columnName === "followingCount" ? (
               <>
-                <option value="<">Less Than</option>
-                <option value=">">Greater Than</option>
+                <option value="<=">Less Than & Equal</option>
+                <option value=">=">Greater Than & Equal</option>
               </>
             ) : filter.columnName === "verified" ? (
               <option value="==">Equals</option>
@@ -246,6 +246,7 @@ const FilterComponent = () => {
               }
               className="px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
             >
+              <option value="">Select condition</option>
               <option value="OR">OR</option>
               <option value="AND">AND</option>
             </select>
@@ -311,7 +312,9 @@ const FilterComponent = () => {
                   {item.location}
                 </td>
                 <td className="px-4 py-2 border border-gray-300">
-                  {item.verified ? "Yes" : "No"}
+                  {item.verified ? "✅" : " ❌ "}
+                  {/* {item.verified.toString()} */}
+                  {/* {item.verified ? "Yes" : "No"} */}
                 </td>
               </tr>
             ))}
