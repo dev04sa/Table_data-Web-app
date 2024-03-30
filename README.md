@@ -32,7 +32,11 @@ This web application is designed to display data retrieved from Firebase in a ta
 
 
 ## Sample Output
-![Sample Output](sample_output.png)
+
+
+https://github.com/dev04sa/Table_data-Web-app/assets/129666293/55c98817-f3a0-439f-938b-5380f529311c
+
+
 
 ## How to Run
 1. Clone the repository.
